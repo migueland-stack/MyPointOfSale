@@ -15,7 +15,7 @@ namespace MyPointOfSale
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Store store = new Store();
+            Shop store = new Shop();
             Application.Run(new frmMain(store));
         }
     }

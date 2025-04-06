@@ -1,12 +1,5 @@
 ﻿using MyPointOfSale.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyPointOfSale
@@ -15,9 +8,9 @@ namespace MyPointOfSale
     {
         private readonly frmLogin _login;
         private readonly frmPointOfSale _pointOfSale;
-        private readonly Store _store;
+        private readonly Shop _store;
 
-        public frmMain(Store store)
+        public frmMain(Shop store)
         {
             InitializeComponent();
 

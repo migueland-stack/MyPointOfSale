@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyPointOfSale.Models
 {
-    internal class Store
+    internal class Stock
     {
-        public List<Stock> Stock { get; set; }
+        public int Id { get; set; }
+        public Product Product { get; set; }
+        public int Quantity { get; set; }
     }
 }

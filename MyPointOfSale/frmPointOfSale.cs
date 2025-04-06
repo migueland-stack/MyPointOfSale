@@ -1,21 +1,14 @@
 ﻿using MyPointOfSale.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyPointOfSale
 {
     public partial class frmPointOfSale : Form
     {
-        private Store _store;
+        private readonly Shop _store;
 
-        public frmPointOfSale(Store store)
+        public frmPointOfSale(Shop store)
         {
             InitializeComponent();
 

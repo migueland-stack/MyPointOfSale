@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyPointOfSale.Models
 {
-    internal class Store
+    internal class NCF
     {
-        public List<Stock> Stock { get; set; }
     }
 }
