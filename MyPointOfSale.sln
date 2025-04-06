@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPointOfSale.WinFormApp", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPointOfSale.Models", "MyPointOfSale.Models\MyPointOfSale.Models.csproj", "{BD7959FC-9F96-470A-8179-2BC0A5AECDA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPointOfSale.DataAccessSQLServer", "MyPointOfSale.DataAccessSQLServer\MyPointOfSale.DataAccessSQLServer.csproj", "{1D89F77F-BDDE-49D8-8510-B86E871B8539}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BD7959FC-9F96-470A-8179-2BC0A5AECDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD7959FC-9F96-470A-8179-2BC0A5AECDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD7959FC-9F96-470A-8179-2BC0A5AECDA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D89F77F-BDDE-49D8-8510-B86E871B8539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D89F77F-BDDE-49D8-8510-B86E871B8539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D89F77F-BDDE-49D8-8510-B86E871B8539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D89F77F-BDDE-49D8-8510-B86E871B8539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

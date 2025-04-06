@@ -16,7 +16,7 @@ namespace MyPointOfSale
             Application.SetCompatibleTextRenderingDefault(false);
 
             Shop store = new Shop();
-            Application.Run(new frmMain(store));
+            Application.Run(new frmLogin(store));
         }
     }
 }

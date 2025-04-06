@@ -58,12 +58,6 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmPointOfSale.resx">
@@ -71,9 +65,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -83,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyPointOfSale.DataAccessSQLServer\MyPointOfSale.DataAccessSQLServer.csproj">
+      <Project>{1d89f77f-bdde-49d8-8510-b86e871b8539}</Project>
+      <Name>MyPointOfSale.DataAccessSQLServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyPointOfSale.Models\MyPointOfSale.Models.csproj">
       <Project>{bd7959fc-9f96-470a-8179-2bc0a5aecda0}</Project>
       <Name>MyPointOfSale.Models</Name>

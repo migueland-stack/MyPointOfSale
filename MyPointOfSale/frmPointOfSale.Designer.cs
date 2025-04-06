@@ -34,10 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblUserEmail = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblUserRol = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -76,6 +77,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(68)))), ((int)(((byte)(108)))));
+            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox7);
@@ -95,65 +97,73 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(207, 681);
+            this.panel1.Size = new System.Drawing.Size(232, 681);
             this.panel1.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.btnLogout.Location = new System.Drawing.Point(167, 571);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(59, 27);
+            this.btnLogout.TabIndex = 18;
+            this.btnLogout.Text = "Salir";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.lblUserEmail);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Controls.Add(this.lblUserRol);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 604);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(207, 77);
+            this.panel2.Size = new System.Drawing.Size(232, 77);
             this.panel2.TabIndex = 17;
             // 
-            // label10
+            // lblUserEmail
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(72, 47);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 21);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "UserEmail";
+            this.lblUserEmail.AutoSize = true;
+            this.lblUserEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblUserEmail.Location = new System.Drawing.Point(65, 47);
+            this.lblUserEmail.Name = "lblUserEmail";
+            this.lblUserEmail.Size = new System.Drawing.Size(0, 15);
+            this.lblUserEmail.TabIndex = 3;
             // 
-            // label9
+            // lblUserName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(72, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 21);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "UserID";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.Black;
+            this.lblUserName.Location = new System.Drawing.Point(65, 26);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(0, 15);
+            this.lblUserName.TabIndex = 2;
             // 
-            // label8
+            // lblUserRol
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(72, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 21);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "UserRole";
+            this.lblUserRol.AutoSize = true;
+            this.lblUserRol.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserRol.ForeColor = System.Drawing.Color.Black;
+            this.lblUserRol.Location = new System.Drawing.Point(65, 5);
+            this.lblUserRol.Name = "lblUserRol";
+            this.lblUserRol.Size = new System.Drawing.Size(0, 21);
+            this.lblUserRol.TabIndex = 1;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(7, 6);
+            this.pictureBox8.Location = new System.Drawing.Point(2, 6);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(59, 65);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label7
             // 
@@ -359,9 +369,9 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(232, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(491, 681);
+            this.dataGridView1.Size = new System.Drawing.Size(531, 681);
             this.dataGridView1.TabIndex = 19;
             // 
             // Column1
@@ -398,6 +408,7 @@
             this.Name = "frmPointOfSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Punto de Venta";
+            this.Load += new System.EventHandler(this.frmPointOfSale_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -435,9 +446,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblUserEmail;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblUserRol;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -445,5 +456,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

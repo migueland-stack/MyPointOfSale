@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGVASURBVHhe7b0H
+        vgAADr4B6kKxwAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAGVASURBVHhe7b0H
         vCRFuf5/QMQsV6/X69Wr/q564/5Z2dNxdhc4ZBAWBNklSJYcBERyRjKoIHEJAgusShREchLJEhcWWHaX
         Pd09J+cc5/S/3t46MNvz9jkzc3pmunue5/P5ynqmqrq6uqvet7ur3qqBICjaek1RPm3Pm/PNtKZtYhvK
         tpapLbIM7VDLVE52DO0i21Svsw31D7auPij++4RlqC/ahvaa+PdKkX6N+HfnuqijAtfHCJPuI5H/Q/Hv
@@ -846,7 +846,7 @@
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFRZSURBVHhe7Z0J
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFRZSURBVHhe7Z0J
         2G9T+f6PIUOGkHnIrFApKopShkxRNFBKg5IMiUijISqVBpkiSaNSaRAZK5UIP42kqMg8ZyxT//99Hw6v
         c+5zzvuuZ6393Xut+3Ndn+s613ve97v3Xs/+7mENzzPJGDMIFoArwufDTeDr4a7wI/Dz8GvwJ/CsR734
         UX8H//6o/4K3P+q98P896kOP/myK18Ipf0P5ORfAM+FJ8EvwM3B/uCfcEb4WbgSfDReHs0JjjDHGTIc5
@@ -1213,7 +1213,7 @@
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC0aSURBVHhe7d0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAC0aSURBVHhe7d0H
         tK1Vfa5xpEhRVJrSm0YJVcUuLYqoEaxBY0HR2EZybSQRa8SGRgXFzvXGgoo1RMQKdkXALoIaOyJIB0E6
         kvu8yjECfw6n7L3XnPN7fmM8YzhUDmfvNb+51vrKnCtI6tJt6O70cHoavZAOpvfQJ+h4+jH9nH5B513T
         7+l/rin/edF/n/9P/r/5Z/LP5s/In5U/M392/h35d+XfeWuSJEnzZH3ag/6Z3kx5Uz6ZLqZFb+KzKn+H
@@ -1409,6 +1409,9 @@
         ZHaTckMJSZo7zsNzboUV/j+AFCdEMmJ0jAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAEBAAAAEAIABoBAAAlgAAABgYAAABACAAiAkAAP4EAAAgIAAAAQAgAKgQAACGDgAAMDAAAAEA

@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Ingresar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,17 +61,17 @@
             this.label1.Size = new System.Drawing.Size(293, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mi Punto de Venta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(68)))), ((int)(((byte)(108)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(308, 450);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -88,31 +91,42 @@
             this.Ingresar.Location = new System.Drawing.Point(427, 88);
             this.Ingresar.Name = "Ingresar";
             this.Ingresar.Size = new System.Drawing.Size(139, 45);
-            this.Ingresar.TabIndex = 2;
+            this.Ingresar.TabIndex = 4;
             this.Ingresar.Text = "Ingresar";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(435, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(274, 39);
-            this.textBox1.TabIndex = 4;
+            this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.Color.Silver;
+            this.txtUser.Location = new System.Drawing.Point(435, 151);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(274, 32);
+            this.txtUser.TabIndex = 0;
+            this.txtUser.Text = "usuario";
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(435, 201);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 39);
-            this.textBox2.TabIndex = 5;
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.Silver;
+            this.txtPass.Location = new System.Drawing.Point(435, 201);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(274, 32);
+            this.txtPass.TabIndex = 1;
+            this.txtPass.Text = "contraseña";
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(262, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(304, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(541, 451);
+            this.pictureBox2.Size = new System.Drawing.Size(496, 450);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -138,21 +152,22 @@
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(435, 318);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(274, 37);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Iniciar Sesión";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogin.Location = new System.Drawing.Point(387, 273);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(322, 37);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Iniciar Sesión";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkLabel1
             // 
@@ -160,31 +175,38 @@
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(228)))), ((int)(((byte)(244)))));
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
             this.linkLabel1.LinkColor = System.Drawing.Color.Teal;
-            this.linkLabel1.Location = new System.Drawing.Point(431, 249);
+            this.linkLabel1.Location = new System.Drawing.Point(466, 313);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(160, 21);
-            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Recuperar Contraseña";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.Ingresar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -195,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,14 +228,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Ingresar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
