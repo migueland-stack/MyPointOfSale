@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyPointOfSale.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,15 @@ using System.Windows.Forms;
 
 namespace MyPointOfSale
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        private Store _store;
+
+        public frmLogin(Store store)
         {
             InitializeComponent();
+
+            _store = store;
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyPointOfSale.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,15 @@ using System.Windows.Forms;
 
 namespace MyPointOfSale
 {
-    public partial class Dashboard : Form
+    public partial class frmPointOfSale : Form
     {
-        public Dashboard()
+        private Store _store;
+
+        public frmPointOfSale(Store store)
         {
             InitializeComponent();
+
+            _store = store;
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

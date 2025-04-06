@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MyPointOfSale.Models;
+using System;
 using System.Windows.Forms;
 
 namespace MyPointOfSale
@@ -16,7 +14,9 @@ namespace MyPointOfSale
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard());
+
+            Store store = new Store();
+            Application.Run(new frmMain(store));
         }
     }
 }
